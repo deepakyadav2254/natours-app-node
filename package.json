@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "learning node express and mongo db.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakyadav2254/natours-deepak.git"
+  },
+  "author": "Deepak Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepakyadav2254/natours-deepak/issues"
+  },
+  "homepage": "https://github.com/deepakyadav2254/natours-deepak#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
