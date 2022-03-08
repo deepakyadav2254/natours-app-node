@@ -1,8 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const morgan = require('morgan');
 const port = 5000;
 
+app.use(morgan('dev'));
 app.use(express.json());
 
 const tours = JSON.parse(

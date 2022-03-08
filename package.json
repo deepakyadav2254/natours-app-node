@@ -14,6 +14,7 @@
   "homepage": "https://github.com/deepakyadav2254/natours-deepak#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
 }
