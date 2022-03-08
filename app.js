@@ -114,16 +114,17 @@ const deleteUser = (req, res) => {
 };
 
 const tourRouter = express.Router();
-app.use('/api/v1/tours', tourRouter);
 
 tourRouter.route('/').get(getAllTours).post(createTour);
 tourRouter.route('/:id').get(getTour).patch(updateTour).delete(deleteTour);
 
 const userRouter = express.Router();
-app.use('/api/v1/users', userRouter);
 
 userRouter.route('/').get(getAllUsers).post(createUser);
 userRouter.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
+
+app.use('/api/v1/tours', tourRouter);
+app.use('/api/v1/users', userRouter);
 
 app.listen(port, () => {
   console.log('application running on 3000');
