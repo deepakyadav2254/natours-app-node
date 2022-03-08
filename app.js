@@ -86,12 +86,44 @@ const deleteTour = (req, res) => {
   });
 };
 
-app.route('/api/v1/tours').get(getAllTours).post(createTour);
-app
-  .route('/api/v1/tours/:id')
-  .get(getTour)
-  .patch(updateTour)
-  .delete(deleteTour);
+const getAllUsers = (req, res) => {
+  res.status(500).json({
+    message: 'This route is still being created.',
+  });
+};
+
+const createUser = (req, res) => {
+  res.status(500).json({
+    message: 'This route is still being created.',
+  });
+};
+const updateUser = (req, res) => {
+  res.status(500).json({
+    message: 'This route is still being created.',
+  });
+};
+const getUser = (req, res) => {
+  res.status(500).json({
+    message: 'This route is still being created.',
+  });
+};
+const deleteUser = (req, res) => {
+  res.status(500).json({
+    message: 'This route is still being created.',
+  });
+};
+
+const tourRouter = express.Router();
+app.use('/api/v1/tours', tourRouter);
+
+tourRouter.route('/').get(getAllTours).post(createTour);
+tourRouter.route('/:id').get(getTour).patch(updateTour).delete(deleteTour);
+
+const userRouter = express.Router();
+app.use('/api/v1/users', userRouter);
+
+userRouter.route('/').get(getAllUsers).post(createUser);
+userRouter.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
 
 app.listen(port, () => {
   console.log('application running on 3000');
