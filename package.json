@@ -4,7 +4,8 @@
   "description": "learning node express and mongo db.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon server.js",
+    "start:prod": "set NODE_ENV=production& nodemon server.js "
   },
   "author": "Deepak Yadav",
   "license": "ISC",
