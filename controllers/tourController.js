@@ -4,7 +4,6 @@ const tours = JSON.parse(
 );
 
 exports.checkId = (req, res, next, value) => {
-  console.log(`The id is ${value}`);
   if (value > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -15,7 +14,6 @@ exports.checkId = (req, res, next, value) => {
 };
 
 exports.checkBody = (req, res, next) => {
-  console.log('into the middleware to check request body.');
   if (!req.body.name || !req.body.price) {
     return res.status(400).json({
       status: 'fail',
