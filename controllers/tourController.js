@@ -22,6 +22,7 @@ exports.checkBody = (req, res, next) => {
   }
   next();
 };
+
 exports.getAllTours = (req, res) => {
   res.status(200).json({
     status: 'success',
