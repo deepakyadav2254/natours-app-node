@@ -4,7 +4,9 @@ dotenv.config({ path: './config.env' }); // tell the path of configuration file.
 const app = require('./app');
 const port = process.env.PORT || 3000;
 const DB = process.env.DATABASE;
-mongoose.connect(DB, {});
+mongoose.connect(DB, {}).then((data) => {
+  console.log('DB connected successfully. ');
+});
 /* console.log(process.env); process.env we can see all the node global variables. */
 
 app.listen(port, () => {
